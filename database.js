@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 
 const initializeDB = async () => {
   const sequelize = new Sequelize(
-    `postgres://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.URL}:${process.env.PORT}/${process.env.DBNAME}`
+    `postgres://${process.env.HYPERUSERNAME}:${process.env.PASSWORD}@${process.env.URL}:${process.env.PORT}/${process.env.DBNAME}`
   );
 
   try {
