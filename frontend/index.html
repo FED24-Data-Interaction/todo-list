@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do list</title>
-    <link rel="stylesheet" href="todo.css" />
+    <!-- <link rel="stylesheet" href="todo.css" /> -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
     <style type="text/tailwindcss">
@@ -16,14 +16,34 @@
       }
     </style>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <h1 class="text-3xl font-bold underline">To-do</h1>
-    <form id="form" method="post" class="container">
-      <input class="input-field" id="task-input" type="text" value="" /> <br />
-      <input class="submit-button" type="submit" value="Add todo" />
-    </form>
-    <ul id="todoitems"></ul>
+  <body class="bg-gray-900">
+    <div class="h-100 w-full flex flex-col items-center justify-center m-2 bg"
+      ><!-- content wrapper -->
+      <div class="p-4">
+        <h1 class="text-3xl font-bold text-purple-500">To-Do App</h1>
+      </div>
+
+      <div class="flex justify-center p-4">
+        <form id="form" method="post" class="container">
+          <input
+            class="input-field mx-2 border-2 border-purple-300 rounded-lg bg-gray-900"
+            id="task-input"
+            type="text"
+            value=""
+          />
+          <input
+            class="submit-button m-2 rounded-lg bg-purple-300 p-2"
+            type="submit"
+            value="Add To-Do"
+          />
+        </form>
+      </div>
+
+      <div>
+        <ul class="m-2" id="todoitems"></ul>
+      </div>
+    </div>
+
     <script src="./frontend.js"></script>
   </body>
 </html>
